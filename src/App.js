@@ -93,7 +93,7 @@ function App() {
         <motion.section id="about" className="py-5 d-flex align-items-center" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <Row className="align-items-center">
             <Col md={4} xs={12} className="text-center mb-3">
-              <img src="photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded-circle shadow-lg img-fluid" width="200" />
+              <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" height="300" />
             </Col>
             <Col md={8} xs={12}>
               <h1>Hi there, I'm Keyshawn</h1>
