@@ -1,8 +1,9 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
-import Footer from "./Footer"; // Ensure Footer.js exists in the same directory
+import Footer from "./Footer"; 
 
 // List of projects - Easily add more
 const projects = [
@@ -68,6 +69,25 @@ const csCourses = ["Introduction to Computing", "Data Structures & Algorithms", 
 const otherCourses = ["Fullstack Bootcamp - Udemy", "Introduction to Psychology", "Critical Thinking"];
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("darkMode") === "true"; // Check if user had dark mode enabled
+  });
+
+  // Toggle function to switch modes
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("darkMode", newMode); // Save preference
+      return newMode;
+    });
+  };
+
+  // Apply dark mode class to <body> when toggled
+ useEffect(() => {
+  console.log("Applying Dark Mode:", darkMode); // 🛠 Debugging line
+  document.body.classList.toggle("dark-mode", darkMode);
+}, [darkMode]);
+
   return (
     <>
       {/* ✅ Navbar - Stays fixed for easy access */}
@@ -83,6 +103,13 @@ function App() {
               <Nav.Link href="#leadership">Leadership</Nav.Link>
               <Nav.Link href="#coursework">Coursework</Nav.Link>
             </Nav>
+            <button 
+          className="btn btn-outline-light ms-3"
+          onClick={toggleDarkMode}
+        >
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
