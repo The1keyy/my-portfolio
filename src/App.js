@@ -18,6 +18,12 @@ const projects = [
     img: "/photos/happ1.png",
     link: "https://the1keyy.github.io/sterlo-birthday-gift/",
   },
+  {
+    title: "Personalized birthday website",
+    description: "This project is a personalized birthday website created to celebrate some one 21 birthday. It includes a thoughtful message, interactive elements, and special features like confetti animations, sound preferences, and a custom-designed theme",
+    img: "/photos/happy2.png",
+    link: "https://the1keyy.github.io/brenda-birthday/",
+  },
 ];
 
 // Work Experience - Ensure images exist in the "photos" directory
