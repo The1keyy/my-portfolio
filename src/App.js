@@ -14,13 +14,13 @@ const projects = [
   },
   {
     title: "Happy Birthday Memory Grid",
-    description: "An interactive birthday web app with animations and a dynamic photo grid.",
-    img: "/photos/happ1.png",
+    description: "An interactive birthday web app with animations and a dynamic photo grid to celebreate my firnd birthday.",
+    img: "/photos/happy1.png",
     link: "https://the1keyy.github.io/sterlo-birthday-gift/",
   },
   {
     title: "Personalized birthday website",
-    description: "This project is a personalized birthday website created to celebrate some one 21 birthday. It includes a thoughtful message, interactive elements, and special features like confetti animations, sound preferences, and a custom-designed theme",
+    description: "This project is a personalized birthday website created to celebrate my friend 21 birthday. It includes a thoughtful message, interactive elements, and special features like confetti animations, sound preferences, and a custom-designed theme",
     img: "/photos/happy2.png",
     link: "https://the1keyy.github.io/brenda-birthday/",
   },
@@ -47,14 +47,19 @@ const experiences = [
 // Leadership & Community Engagement
 const leadership = [
   {
-    title: "National Society of Black Engineers (NSBE) - President",
-    description: "Revitalized the NSBE chapter at UMass Boston after a 2-year hiatus, organized STEM workshops, and led chapter operations, including meeting coordination and member engagement initiatives.",
+    title: "National Society of Black Engineers - President",
+    description: "As President, I revitalized the NSBE chapter at UMass Boston after a 2-year hiatus, organized STEM workshops, and led chapter operations, including meeting coordination and member engagement initiatives.",
     img: "/photos/nsbe.png",
   },
   {
     title: "ColorStack Member",
     description: "Engaged in mentorship and networking events to expand knowledge in software engineering.",
     img: "/photos/colorstack.png",
+  },
+  {
+    title: "Adage",
+    description: "The ADAGE Program at UMB provides access to professional development resources across various tech-related fields, including IT, Cybersecurity, Coding, and AI. The program has also collaborated with major brands like Apple to offer specialized training, such as coding in Swift.",
+    img: "/photos/adage.jpeg",
   },
 ];
 
