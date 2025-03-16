@@ -4,72 +4,90 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import Footer from "./Footer";  
 
-// Project list - Easily add more projects
+// List of projects with details
 const projects = [
   {
-    title: "Meetitude",
-    description: "A web app for event planning. Users create events, generate invite links, and collect availability. The app suggests the best meeting times.",
-    img: "photos/meetitude.png",
-    link: "https://meetitude.com/index.html",
+    title: "Event Planner App",
+    description: "A collaborative platform for event management and scheduling.",
+    img: "/event-planner.jpg",
+    link: "https://github.com/The1keyy/event-planner",
   },
   {
     title: "Happy Birthday Memory Grid",
-    description: "An interactive birthday web app with animations and a dynamic photo grid.",
-    img: "photos/memorygrid.png",
-    link: "https://the1keyy.github.io/sterlo-birthday-gift/",
+    description: "An interactive web app with animations and a dynamic photo grid.",
+    img: "/birthday-memory.jpg",
+    link: "https://github.com/The1keyy/memory-grid",
   },
 ];
 
-// Work Experience - Added images for a visual touch
+// Work experience details (Corrected)
 const experiences = [
   {
     title: "Help Desk Engineer Intern",
-    company: "University of Massachusetts Boston IT Dept.",
-    date: "Dec 2024 - Present",
-    description: "Provided tech support to students & faculty, troubleshooting software, network, and system issues with a 90% resolution rate.",
-    img: "photos/helpdesk.png",
+    company: "University of Massachusetts Boston IT Department",
+    date: "December 2024 - Present",
+    description: "Provided technical support for students and faculty, troubleshooting software, network, and system issues with a 90% resolution rate. Diagnosed errors using Terminal and PowerShell, improving response time.",
+    img: "/photos/helpdesk.png",
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Company Name",
+    date: "Summer 2023",
+    description: "Worked on cloud-based applications, optimized APIs, and enhanced system security.",
+    img: "/photos/software_engineer.png",
   },
   {
     title: "Freelance Developer",
     company: "Remote",
-    date: "Dec 2024 - Present",
-    description: "Built multiple responsive websites, ensuring mobile compatibility & user-friendly interfaces with JavaScript & React.js.",
-    img: "photos/freelance.png",
+    date: "December 2024 - Present",
+    description: "Designed, developed, and deployed multiple responsive websites, ensuring mobile compatibility and user-friendly interfaces using JavaScript and React.js.",
+    img: "/photos/freelance.png",
   },
 ];
 
-// Leadership & Community Section - Easily extendable
+// Leadership and Community Engagement Section (Corrected)
 const leadership = [
   {
     title: "National Society of Black Engineers (NSBE) - President",
-    description: "Revitalized the NSBE chapter, organized STEM workshops, and secured guest speakers for career growth.",
-    img: "photos/nsbe.png",
+    description: "Revitalized the NSBE chapter, organized STEM workshops, and secured guest speakers to enhance career opportunities for members.",
+    img: "/photos/nsbe.png",
   },
   {
     title: "ColorStack Member",
-    description: "Engaged in mentorship and networking events to expand knowledge in software engineering.",
-    img: "photos/colorstack.png",
+    description: "Engaged in mentorship and career development programs, participating in virtual networking events to expand knowledge in software engineering.",
+    img: "/photos/colorstack.png",
+  },
+  {
+    title: "Technical Research Assistant",
+    company: "University Name",
+    date: "2022-2023",
+    description: "Assisted in AI research, developing machine learning models for data processing.",
+    img: "/photos/research.png",
   },
 ];
 
-// Coursework categorized into two sections for readability
+// Coursework categorized into two sections
 const csCourses = [
-  "Introduction to Computing",
-  "Intermediate Computing with Data Structures and Algorithms",
-  "Programming in C",
-  "Applied Discrete Mathematics",
+  "CS 149 Parallel Computing",
+  "CS 143 Compilers",
+  "CS 144 Networking",
+  "CS 161 Algorithms",
+  "CS 111 Operating Systems",
+  "CS 106B Programming Abstractions in C++",
 ];
 
 const otherCourses = [
-  "Fullstack Bootcamp - Udemy",
-  "Introduction to Psychology",
-  "Critical Thinking",
+  "Deep Learning Specialization - Coursera",
+  "PSYCH 1 Introduction to Psychology",
+  "ENGLISH 91 Creative Nonfiction",
+  "FILMEDIA 50Q The Video Essay",
+  "THINK 66 Design That Understands Us",
 ];
 
 function App() {
   return (
     <>
-      {/* Navbar - Fixed at the top for easy access */}
+      {/* Navbar */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
@@ -86,28 +104,22 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* Main Container - Keeps all content structured */}
+      {/* Main Container */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
         
         {/* About Me Section */}
-        <motion.section 
-          id="about" 
-          className="py-5 d-flex align-items-center" 
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1 }}
-        >
+        <motion.section id="about" className="py-5 d-flex align-items-center">
           <Row className="align-items-center">
             <Col md={4} xs={12} className="text-center mb-3">
-              <img src="photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
+              <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" height="300" />
             </Col>
             <Col md={8} xs={12}>
               <h1>Hi there, I'm Keyshawn</h1>
-              <p>Passionate about tech, solving real-world problems, and creating innovative solutions. Always looking for new challenges to build impactful applications.</p>
+              <p>Passionate about tech, solving real-world problems, and creating innovative solutions. From front-end development to backend logic, I thrive on building applications that enhance user experiences.</p>
             </Col>
           </Row>
         </motion.section>
-
+        
         <hr />
 
         {/* Projects Section */}
@@ -121,17 +133,19 @@ function App() {
                   <Card.Body>
                     <Card.Title>{project.title}</Card.Title>
                     <Card.Text>{project.description}</Card.Text>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-dark">View Project</a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+                      GitHub Repo
+                    </a>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
           </Row>
         </motion.section>
-
+        
         <hr />
 
-        {/* Experience Section */}
+        {/* Experience Section with Images */}
         <motion.section id="experience" className="py-5">
           <h2 className="text-center">Experience</h2>
           <Row className="justify-content-center">
@@ -149,7 +163,7 @@ function App() {
             ))}
           </Row>
         </motion.section>
-
+        
         <hr />
 
         {/* Leadership Section */}
@@ -167,23 +181,6 @@ function App() {
                 </Card>
               </Col>
             ))}
-          </Row>
-        </motion.section>
-
-        <hr />
-
-        {/* Coursework Section */}
-        <motion.section id="coursework" className="py-5">
-          <h2 className="text-center">Coursework</h2>
-          <Row>
-            <Col md={6}>
-              <h4>Computer Science</h4>
-              <ul>{csCourses.map((course, index) => <li key={index}>{course}</li>)}</ul>
-            </Col>
-            <Col md={6}>
-              <h4>Other Courses</h4>
-              <ul>{otherCourses.map((course, index) => <li key={index}>{course}</li>)}</ul>
-            </Col>
           </Row>
         </motion.section>
 
