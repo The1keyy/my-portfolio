@@ -20,23 +20,25 @@ const projects = [
   },
 ];
 
-// Work experience details (Easily extendable)
+// Work experience details (Now includes images)
 const experiences = [
   {
     title: "Help Desk Engineer Intern",
     company: "University of Massachusetts Boston IT Department",
     date: "December 2024 - Present",
     description: "Provided technical support for students and faculty, troubleshooting software, network, and system issues with a 90% resolution rate. Diagnosed errors using Terminal and PowerShell, improving response time.",
+    img: "photos/helpdesk.png", // Ensure this image is in your "photos" folder
   },
   {
     title: "Freelance Developer",
     company: "Remote",
     date: "December 2024 - Present",
     description: "Designed, developed, and deployed multiple responsive websites, ensuring mobile compatibility and user-friendly interfaces using JavaScript and React.js.",
+    img: "photos/freelance.png", // Ensure this image is in your "photos" folder
   },
 ];
 
-// Leadership and Community Engagement Section (Dynamic & Auto-Adjusting)
+// Leadership and Community Engagement Section
 const leadership = [
   {
     title: "National Society of Black Engineers (NSBE) - President",
@@ -67,7 +69,7 @@ const otherCourses = [
 function App() {
   return (
     <>
-      {/* Navbar - Stays fixed at the top */}
+      {/* Navbar */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
@@ -84,7 +86,7 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* Main Container - Includes all sections */}
+      {/* Main Container */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
 
         {/* About Me Section */}
@@ -95,9 +97,7 @@ function App() {
             </Col>
             <Col md={8} xs={12}>
               <h1>Hi there, I'm Keyshawn</h1>
-              <p>
-                Passionate about tech, solving real-world problems, and creating innovative solutions. From front-end development to backend logic, I thrive on building applications that enhance user experiences.
-              </p>
+              <p>Passionate about tech, solving real-world problems, and creating innovative solutions. From front-end development to backend logic, I thrive on building applications that enhance user experiences.</p>
             </Col>
           </Row>
         </motion.section>
@@ -125,13 +125,14 @@ function App() {
 
         <hr />
 
-        {/* Experience Section */}
+        {/* Experience Section with Images */}
         <motion.section id="experience" className="py-5">
           <h2 className="text-center">Experience</h2>
           <Row className="justify-content-center">
             {experiences.map((exp, index) => (
               <Col md={5} sm={12} className="mb-4" key={index}>
                 <Card className="shadow-lg border-0">
+                  <Card.Img variant="top" src={exp.img} />
                   <Card.Body>
                     <Card.Title>{exp.title}</Card.Title>
                     <p><strong>{exp.company}</strong> - {exp.date}</p>
@@ -145,7 +146,7 @@ function App() {
 
         <hr />
 
-        {/* Leadership and Community Engagement Section (Auto-Adjusting) */}
+        {/* Leadership Section */}
         <motion.section id="leadership" className="py-5">
           <h2 className="text-center">Leadership & Community Engagement</h2>
           <Row className="justify-content-center">
