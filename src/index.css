@@ -112,3 +112,125 @@ footer {
     font-size: 1.1rem;
   }
 }
+/* 🔹 Footer Styling */
+.footer {
+  background-color: #222;  /* Dark background */
+  color: white;
+  padding: 30px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer a {
+  color: #ffcc00;  /* Gold Accent */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #ffffff; /* White Hover */
+  text-decoration: underline;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+/* ✅ Mobile Responsiveness Fixes */
+
+/* 🔹 Navbar: Ensure menu collapses on mobile */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 🔹 About Me Section: Stack image on top in small screens */
+@media (max-width: 768px) {
+  #about .text-center img {
+    margin-bottom: 15px;
+  }
+  #about h1 {
+    font-size: 24px;
+  }
+  #about p {
+    font-size: 16px;
+  }
+}
+
+/* 🔹 Projects & Experience: Stack properly */
+@media (max-width: 768px) {
+  .col-md-4, .col-md-5 {
+    width: 100%;
+  }
+}
+
+/* 🔹 Coursework: Keep it readable */
+@media (max-width: 768px) {
+  #coursework ul {
+    padding-left: 20px;
+  }
+}
+
+/* 🔹 Footer: Stack sections */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* 🔹 Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+/* 🔹 Card Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* 🔹 Section Title Styling */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+/* 🔹 Optimize Image Sizes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* 🔹 Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #e6b800;
+}

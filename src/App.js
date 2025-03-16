@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
+import Footer from "./Footer";  // ✅ Import Footer Component
 
 const projects = [
   {
@@ -33,7 +34,6 @@ const experiences = [
   },
 ];
 
-// Coursework categorized into two sections
 const csCourses = [
   "CS 149 Parallel Computing",
   "CS 143 Compilers",
@@ -54,21 +54,24 @@ const otherCourses = [
 function App() {
   return (
     <>
-      {/* Navbar */}
+      {/* ✅ Mobile-Friendly Navbar */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link href="#about">About Me</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#experience">Experience</Nav.Link>
-            <Nav.Link href="#research">Research</Nav.Link>
-            <Nav.Link href="#coursework">Coursework</Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#about">About Me</Nav.Link>
+              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#experience">Experience</Nav.Link>
+              <Nav.Link href="#research">Research</Nav.Link>
+              <Nav.Link href="#coursework">Coursework</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Main Content */}
+      {/* ✅ Main Content */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
         
         {/* About Me Section */}
@@ -80,15 +83,15 @@ function App() {
           transition={{ duration: 1 }}
         >
           <Row className="align-items-center">
-            <Col md={4} className="text-center">
+            <Col md={4} xs={12} className="text-center mb-3">
               <img 
                 src="/profile.jpg" 
                 alt="Keyshawn Jeannot" 
-                className="rounded-circle shadow-lg" 
+                className="rounded-circle shadow-lg img-fluid" 
                 width="200"
               />
             </Col>
-            <Col md={8}>
+            <Col md={8} xs={12}>
               <h1>👋 Hi there, I'm Keyshawn!</h1>
               <p>
                 I’m a tech professional passionate about using technology to drive positive change. 
@@ -112,7 +115,7 @@ function App() {
           <h2 className="text-center">🚀 Projects</h2>
           <Row className="justify-content-center">
             {projects.map((project, index) => (
-              <Col md={4} className="mb-4" key={index}>
+              <Col md={4} sm={6} xs={12} className="mb-4" key={index}>
                 <motion.div whileHover={{ scale: 1.05 }}>
                   <Card className="shadow-lg border-0">
                     <Card.Img variant="top" src={project.img} />
@@ -143,7 +146,7 @@ function App() {
           <h2 className="text-center">💼 Experience</h2>
           <Row className="justify-content-center">
             {experiences.map((exp, index) => (
-              <Col md={5} className="mb-4" key={index}>
+              <Col md={5} sm={12} className="mb-4" key={index}>
                 <motion.div whileHover={{ scale: 1.02 }}>
                   <Card className="shadow-lg border-0">
                     <Card.Body>
@@ -184,7 +187,7 @@ function App() {
         >
           <h2 className="text-center">📚 Coursework</h2>
           <Row>
-            <Col md={6}>
+            <Col md={6} sm={12}>
               <h4>Computer Science</h4>
               <ul>
                 {csCourses.map((course, index) => (
@@ -192,7 +195,7 @@ function App() {
                 ))}
               </ul>
             </Col>
-            <Col md={6}>
+            <Col md={6} sm={12}>
               <h4>Other Courses</h4>
               <ul>
                 {otherCourses.map((course, index) => (
@@ -204,8 +207,23 @@ function App() {
         </motion.section>
         
       </Container>
+
+      {/* ✅ Footer Added Here */}
+      <Footer />
+
+      <motion.button
+  className="back-to-top"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  whileHover={{ scale: 1.1 }}
+>
+  ⬆ Back to Top
+</motion.button>
+
+
     </>
   );
 }
 
 export default App;
+
+
