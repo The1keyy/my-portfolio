@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import Footer from "./Footer"; // Ensure Footer.js exists in the same directory
 
-// ✅ List of projects - Easily add more
+// List of projects - Easily add more
 const projects = [
   {
     title: "Meetitude",
@@ -15,34 +15,34 @@ const projects = [
   {
     title: "Happy Birthday Memory Grid",
     description: "An interactive birthday web app with animations and a dynamic photo grid.",
-    img: "/photos/memorygrid.png",
+    img: "/photos/happ1.png",
     link: "https://the1keyy.github.io/sterlo-birthday-gift/",
   },
 ];
 
-// ✅ Work Experience - Ensure images exist in the "photos" directory
+// Work Experience - Ensure images exist in the "photos" directory
 const experiences = [
   {
     title: "Help Desk Engineer Intern",
     company: "University of Massachusetts Boston IT Dept.",
     date: "Dec 2024 - Present",
     description: "Provided tech support to students & faculty, troubleshooting software, network, and system issues with a 90% resolution rate.",
-    img: "/photos/helpdesk.png",
+    img: "/photos/boston.png",
   },
   {
     title: "Freelance Developer",
     company: "Remote",
     date: "Dec 2024 - Present",
     description: "Built multiple responsive websites, ensuring mobile compatibility & user-friendly interfaces with JavaScript & React.js.",
-    img: "/photos/freelance.png",
+    img: "/photos/soon.png",
   },
 ];
 
-// ✅ Leadership & Community Engagement
+// Leadership & Community Engagement
 const leadership = [
   {
     title: "National Society of Black Engineers (NSBE) - President",
-    description: "Revitalized the NSBE chapter, organized STEM workshops, and secured guest speakers for career growth.",
+    description: "Revitalized the NSBE chapter at UMass Boston after a 2-year hiatus, organized STEM workshops, and led chapter operations, including meeting coordination and member engagement initiatives.",
     img: "/photos/nsbe.png",
   },
   {
@@ -52,7 +52,7 @@ const leadership = [
   },
 ];
 
-// ✅ Coursework Section
+// Coursework Section
 const csCourses = ["Introduction to Computing", "Data Structures & Algorithms", "Programming in C", "Discrete Mathematics"];
 const otherCourses = ["Fullstack Bootcamp - Udemy", "Introduction to Psychology", "Critical Thinking"];
 
@@ -92,15 +92,19 @@ function App() {
               <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
             </Col>
             <Col md={8} xs={12}>
-              <h1>Hi there, I'm Keyshawn</h1>
-              <p>Passionate about tech, solving real-world problems, and creating innovative solutions. Always looking for new challenges to build impactful applications.</p>
+              <h1>Welcome to my page! I'm Keyshawn, explore my journey in tech and the projects </h1>
+              <p>I love problem-solving, and tech is one of the best ways to do it. I don’t see technology as a way to make the world perfect, but as a tool to tackle real challenges and build solutions that actually make a difference. With tech evolving so fast, history is being made right before our eyes—I’m just grateful to be part of this journey and experience it firsthand.
+
+At first, I thought the only way to help the world was by becoming a doctor, but as I grew, I realized that technology has the power to change lives too. Whether it's creating impactful software, building tools that improve daily life, or just making things more efficient, tech gives me the ability to contribute in ways I never imagined.
+
+So here I am, exploring, learning, and building—one project at a time.</p>
             </Col>
           </Row>
         </motion.section>
 
         <hr />
 
-        {/* ✅ Projects Section */}
+        {/*  Projects Section */}
         <motion.section id="projects" className="py-5">
           <h2 className="text-center">Projects</h2>
           <Row className="justify-content-center">
@@ -121,7 +125,7 @@ function App() {
 
         <hr />
 
-        {/* ✅ Experience Section */}
+        {/* Experience Section */}
         <motion.section id="experience" className="py-5">
           <h2 className="text-center">Experience</h2>
           <Row className="justify-content-center">
@@ -142,7 +146,7 @@ function App() {
 
         <hr />
 
-        {/* ✅ Leadership Section */}
+        {/*  Leadership Section */}
         <motion.section id="leadership" className="py-5">
           <h2 className="text-center">Leadership & Community Engagement</h2>
           <Row className="justify-content-center">
@@ -162,7 +166,7 @@ function App() {
 
         <hr />
 
-        {/* ✅ Coursework Section */}
+        {/* Coursework Section */}
         <motion.section id="coursework" className="py-5">
           <h2 className="text-center">Coursework</h2>
           <Row>
@@ -179,7 +183,7 @@ function App() {
 
       </Container>
 
-      {/* ✅ Footer */}
+      {/* Footer */}
       <Footer />
     </>
   );
