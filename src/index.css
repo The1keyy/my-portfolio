@@ -1,13 +1,114 @@
+/* 🔹 Apply a clean, professional font */
 body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa; /* Light Gray - Clean, Modern */
+  color: #333; /* Dark Gray Text for Readability */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 🔹 Improve Heading Styles */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;  /* Dark Gray for Professionalism */
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Improve Button Styling */
+.btn-dark {
+  background-color: #0056b3; /* Professional Blue */
+  border: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.btn-dark:hover {
+  background-color: #003d80; /* Darker Blue Hover */
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Improve Navbar Styles */
+.navbar {
+  padding: 15px;
+  background-color: #222; /* Dark Gray - Modern, Professional */
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #ffffff; /* White Text */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff; /* White for High Contrast */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00; /* Gold Accent for Warmth */
+}
+
+/* 🔹 Improve Section Spacing */
+section {
+  padding: 60px 20px;
+}
+
+/* 🔹 Improve Project Card Shadows */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Improve Footer */
+footer {
+  background-color: #222; /* Dark Gray */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+/* 🔹 Responsive Fixes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
 }
