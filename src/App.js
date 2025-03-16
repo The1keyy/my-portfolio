@@ -4,55 +4,55 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import Footer from "./Footer";  
 
-// List of projects with details (Easily extendable)
+// Project list - Easily add more projects
 const projects = [
   {
     title: "Meetitude",
-    description: "A web application designed to simplify event planning and scheduling. Users can create events, generate unique invite links, and collect availability from attendees. The platform suggests optimal meeting times based on schedules.",
+    description: "A web app for event planning. Users create events, generate invite links, and collect availability. The app suggests the best meeting times.",
     img: "photos/meetitude.png",
     link: "https://meetitude.com/index.html",
   },
   {
     title: "Happy Birthday Memory Grid",
-    description: "An interactive web app featuring animations and a dynamic photo grid, enhancing user engagement with a personalized experience.",
+    description: "An interactive birthday web app with animations and a dynamic photo grid.",
     img: "photos/memorygrid.png",
     link: "https://the1keyy.github.io/sterlo-birthday-gift/",
   },
 ];
 
-// Work experience details (Now includes images)
+// Work Experience - Added images for a visual touch
 const experiences = [
   {
     title: "Help Desk Engineer Intern",
-    company: "University of Massachusetts Boston IT Department",
-    date: "December 2024 - Present",
-    description: "Provided technical support for students and faculty, troubleshooting software, network, and system issues with a 90% resolution rate. Diagnosed errors using Terminal and PowerShell, improving response time.",
-    img: "photos/helpdesk.png", // Ensure this image is in your "photos" folder
+    company: "University of Massachusetts Boston IT Dept.",
+    date: "Dec 2024 - Present",
+    description: "Provided tech support to students & faculty, troubleshooting software, network, and system issues with a 90% resolution rate.",
+    img: "photos/helpdesk.png",
   },
   {
     title: "Freelance Developer",
     company: "Remote",
-    date: "December 2024 - Present",
-    description: "Designed, developed, and deployed multiple responsive websites, ensuring mobile compatibility and user-friendly interfaces using JavaScript and React.js.",
-    img: "photos/freelance.png", // Ensure this image is in your "photos" folder
+    date: "Dec 2024 - Present",
+    description: "Built multiple responsive websites, ensuring mobile compatibility & user-friendly interfaces with JavaScript & React.js.",
+    img: "photos/freelance.png",
   },
 ];
 
-// Leadership and Community Engagement Section
+// Leadership & Community Section - Easily extendable
 const leadership = [
   {
     title: "National Society of Black Engineers (NSBE) - President",
-    description: "Revitalized the NSBE chapter, organized STEM workshops, and secured guest speakers to enhance career opportunities for members.",
+    description: "Revitalized the NSBE chapter, organized STEM workshops, and secured guest speakers for career growth.",
     img: "photos/nsbe.png",
   },
   {
     title: "ColorStack Member",
-    description: "Engaged in mentorship and career development programs, participating in virtual networking events to expand knowledge in software engineering.",
+    description: "Engaged in mentorship and networking events to expand knowledge in software engineering.",
     img: "photos/colorstack.png",
   },
 ];
 
-// Coursework categorized into two sections
+// Coursework categorized into two sections for readability
 const csCourses = [
   "Introduction to Computing",
   "Intermediate Computing with Data Structures and Algorithms",
@@ -69,7 +69,7 @@ const otherCourses = [
 function App() {
   return (
     <>
-      {/* Navbar */}
+      {/* Navbar - Fixed at the top for easy access */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
@@ -86,25 +86,24 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* Main Container */}
+      {/* Main Container - Keeps all content structured */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
-
+        
         {/* About Me Section */}
-        <motion.section id="about" className="py-5 d-flex align-items-center" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+        <motion.section 
+          id="about" 
+          className="py-5 d-flex align-items-center" 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }}
+        >
           <Row className="align-items-center">
             <Col md={4} xs={12} className="text-center mb-3">
-
-              <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" height="300" />
-              <img 
-                src="photos/me.jpeg" 
-                alt="Keyshawn Jeannot" 
-                className="rounded-circle shadow-lg img-fluid" 
-                width="200"
-              />
+              <img src="photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
             </Col>
             <Col md={8} xs={12}>
               <h1>Hi there, I'm Keyshawn</h1>
-              <p>Passionate about tech, solving real-world problems, and creating innovative solutions. From front-end development to backend logic, I thrive on building applications that enhance user experiences.</p>
+              <p>Passionate about tech, solving real-world problems, and creating innovative solutions. Always looking for new challenges to build impactful applications.</p>
             </Col>
           </Row>
         </motion.section>
@@ -132,7 +131,7 @@ function App() {
 
         <hr />
 
-        {/* Experience Section with Images */}
+        {/* Experience Section */}
         <motion.section id="experience" className="py-5">
           <h2 className="text-center">Experience</h2>
           <Row className="justify-content-center">
@@ -190,6 +189,7 @@ function App() {
 
       </Container>
 
+      {/* Footer */}
       <Footer />
     </>
   );
