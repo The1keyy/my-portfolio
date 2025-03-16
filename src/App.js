@@ -2,74 +2,64 @@ import React from "react";
 import { Container, Row, Col, Card, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
-import Footer from "./Footer";  
+import Footer from "./Footer"; // Ensure Footer.js exists in the same directory
 
-// Project list - Easily add more projects
+// ✅ List of projects - Easily add more
 const projects = [
   {
     title: "Meetitude",
     description: "A web app for event planning. Users create events, generate invite links, and collect availability. The app suggests the best meeting times.",
-    img: "photos/meetitude.png",
+    img: "/photos/meetitude.png",
     link: "https://meetitude.com/index.html",
   },
   {
     title: "Happy Birthday Memory Grid",
     description: "An interactive birthday web app with animations and a dynamic photo grid.",
-    img: "photos/memorygrid.png",
+    img: "/photos/memorygrid.png",
     link: "https://the1keyy.github.io/sterlo-birthday-gift/",
   },
 ];
 
-// Work Experience - Added images for a visual touch
+// ✅ Work Experience - Ensure images exist in the "photos" directory
 const experiences = [
   {
     title: "Help Desk Engineer Intern",
     company: "University of Massachusetts Boston IT Dept.",
     date: "Dec 2024 - Present",
     description: "Provided tech support to students & faculty, troubleshooting software, network, and system issues with a 90% resolution rate.",
-    img: "photos/helpdesk.png",
+    img: "/photos/helpdesk.png",
   },
   {
     title: "Freelance Developer",
     company: "Remote",
     date: "Dec 2024 - Present",
     description: "Built multiple responsive websites, ensuring mobile compatibility & user-friendly interfaces with JavaScript & React.js.",
-    img: "photos/freelance.png",
+    img: "/photos/freelance.png",
   },
 ];
 
-// Leadership & Community Section - Easily extendable
+// ✅ Leadership & Community Engagement
 const leadership = [
   {
     title: "National Society of Black Engineers (NSBE) - President",
     description: "Revitalized the NSBE chapter, organized STEM workshops, and secured guest speakers for career growth.",
-    img: "photos/nsbe.png",
+    img: "/photos/nsbe.png",
   },
   {
     title: "ColorStack Member",
     description: "Engaged in mentorship and networking events to expand knowledge in software engineering.",
-    img: "photos/colorstack.png",
+    img: "/photos/colorstack.png",
   },
 ];
 
-// Coursework categorized into two sections for readability
-const csCourses = [
-  "Introduction to Computing",
-  "Intermediate Computing with Data Structures and Algorithms",
-  "Programming in C",
-  "Applied Discrete Mathematics",
-];
-
-const otherCourses = [
-  "Fullstack Bootcamp - Udemy",
-  "Introduction to Psychology",
-  "Critical Thinking",
-];
+// ✅ Coursework Section
+const csCourses = ["Introduction to Computing", "Data Structures & Algorithms", "Programming in C", "Discrete Mathematics"];
+const otherCourses = ["Fullstack Bootcamp - Udemy", "Introduction to Psychology", "Critical Thinking"];
 
 function App() {
   return (
     <>
-      {/* Navbar - Fixed at the top for easy access */}
+      {/* ✅ Navbar - Stays fixed for easy access */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
@@ -86,10 +76,10 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* Main Container - Keeps all content structured */}
+      {/* ✅ Main Content Container */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
         
-        {/* About Me Section */}
+        {/* ✅ About Me Section */}
         <motion.section 
           id="about" 
           className="py-5 d-flex align-items-center" 
@@ -99,7 +89,7 @@ function App() {
         >
           <Row className="align-items-center">
             <Col md={4} xs={12} className="text-center mb-3">
-              <img src="photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
+              <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
             </Col>
             <Col md={8} xs={12}>
               <h1>Hi there, I'm Keyshawn</h1>
@@ -110,7 +100,7 @@ function App() {
 
         <hr />
 
-        {/* Projects Section */}
+        {/* ✅ Projects Section */}
         <motion.section id="projects" className="py-5">
           <h2 className="text-center">Projects</h2>
           <Row className="justify-content-center">
@@ -131,7 +121,7 @@ function App() {
 
         <hr />
 
-        {/* Experience Section */}
+        {/* ✅ Experience Section */}
         <motion.section id="experience" className="py-5">
           <h2 className="text-center">Experience</h2>
           <Row className="justify-content-center">
@@ -152,7 +142,7 @@ function App() {
 
         <hr />
 
-        {/* Leadership Section */}
+        {/* ✅ Leadership Section */}
         <motion.section id="leadership" className="py-5">
           <h2 className="text-center">Leadership & Community Engagement</h2>
           <Row className="justify-content-center">
@@ -172,7 +162,7 @@ function App() {
 
         <hr />
 
-        {/* Coursework Section */}
+        {/* ✅ Coursework Section */}
         <motion.section id="coursework" className="py-5">
           <h2 className="text-center">Coursework</h2>
           <Row>
@@ -189,7 +179,7 @@ function App() {
 
       </Container>
 
-      {/* Footer */}
+      {/* ✅ Footer */}
       <Footer />
     </>
   );
