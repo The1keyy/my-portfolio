@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import Footer from "./Footer";  
 
+// List of projects with details
 const projects = [
   {
     title: "Event Planner App",
@@ -19,6 +20,7 @@ const projects = [
   },
 ];
 
+// Work experience details
 const experiences = [
   {
     title: "Software Engineer Intern",
@@ -34,6 +36,7 @@ const experiences = [
   },
 ];
 
+// Coursework categorized into two sections
 const csCourses = [
   "CS 149 Parallel Computing",
   "CS 143 Compilers",
@@ -54,7 +57,7 @@ const otherCourses = [
 function App() {
   return (
     <>
-      {/* ✅ Mobile-Friendly Navbar */}
+      {/* Navbar - Stays fixed at the top for easy navigation */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
@@ -71,7 +74,7 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* ✅ Main Content */}
+      {/* Main container for all sections */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
         
         {/* About Me Section */}
@@ -92,7 +95,7 @@ function App() {
               />
             </Col>
             <Col md={8} xs={12}>
-              <h1>👋 Hi there, I'm Keyshawn!</h1>
+              <h1>Hi there, I'm Keyshawn</h1>
               <p>
                 I’m a tech professional passionate about using technology to drive positive change. 
                 From enhancing user experiences to solving real-world problems, I thrive on building 
@@ -112,7 +115,7 @@ function App() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-center">🚀 Projects</h2>
+          <h2 className="text-center">Projects</h2>
           <Row className="justify-content-center">
             {projects.map((project, index) => (
               <Col md={4} sm={6} xs={12} className="mb-4" key={index}>
@@ -143,7 +146,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-center">💼 Experience</h2>
+          <h2 className="text-center">Experience</h2>
           <Row className="justify-content-center">
             {experiences.map((exp, index) => (
               <Col md={5} sm={12} className="mb-4" key={index}>
@@ -171,8 +174,8 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h2>🔬 Research</h2>
-          <p>Because we're working on it! 😉</p>
+          <h2>Research</h2>
+          <p>Because we're working on it</p>
         </motion.section>
         
         <hr />
@@ -185,7 +188,7 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-center">📚 Coursework</h2>
+          <h2 className="text-center">Coursework</h2>
           <Row>
             <Col md={6} sm={12}>
               <h4>Computer Science</h4>
@@ -208,22 +211,30 @@ function App() {
         
       </Container>
 
-      {/* ✅ Footer Added Here */}
+      {/* Footer at the bottom of the page */}
       <Footer />
 
+      {/* Button to scroll back to the top */}
       <motion.button
-  className="back-to-top"
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  whileHover={{ scale: 1.1 }}
->
-  ⬆ Back to Top
-</motion.button>
-
-
+        className="back-to-top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        whileHover={{ scale: 1.1 }}
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          background: "#000",
+          color: "#fff",
+          border: "none",
+          padding: "10px 15px",
+          borderRadius: "50%",
+          cursor: "pointer",
+        }}
+      >
+        Back to Top
+      </motion.button>
     </>
   );
 }
 
 export default App;
-
-
