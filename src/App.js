@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
-import Footer from "./Footer";  // ✅ Import Footer Component
+import Footer from "./Footer";  
 
 const projects = [
   {
@@ -85,7 +85,7 @@ function App() {
           <Row className="align-items-center">
             <Col md={4} xs={12} className="text-center mb-3">
               <img 
-                src="/profile.jpg" 
+                src="photos/me.jpeg" 
                 alt="Keyshawn Jeannot" 
                 className="rounded-circle shadow-lg img-fluid" 
                 width="200"
