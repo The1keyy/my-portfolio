@@ -103,13 +103,6 @@ function App() {
               <Nav.Link href="#leadership">Leadership</Nav.Link>
               <Nav.Link href="#coursework">Coursework</Nav.Link>
             </Nav>
-            <button 
-          className="btn btn-outline-light ms-3"
-          onClick={toggleDarkMode}
-        >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-
           </Navbar.Collapse>
         </Container>
       </Navbar>

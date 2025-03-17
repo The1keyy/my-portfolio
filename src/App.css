@@ -42,31 +42,3 @@
     transform: rotate(360deg); /* Full rotation */
   }
 }
-/* Default Light Mode */
-body {
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Dark Navbar */
-.dark-mode .navbar {
-  background-color: #222 !important;
-}
-
-/* Dark Cards */
-.dark-mode .card {
-  background-color: #333;
-  color: white;
-  border: 1px solid #444;
-}
-
-/* Dark Footer */
-.dark-mode footer {
-  background-color: #222;
-}
