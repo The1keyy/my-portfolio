@@ -1,9 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
-import Footer from "./Footer"; 
+import Footer from "./Footer";
 
 // List of projects - Easily add more
 const projects = [
@@ -69,25 +68,6 @@ const csCourses = ["Introduction to Computing", "Data Structures & Algorithms", 
 const otherCourses = ["Fullstack Bootcamp - Udemy", "Introduction to Psychology", "Critical Thinking"];
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("darkMode") === "true"; // Check if user had dark mode enabled
-  });
-
-  // Toggle function to switch modes
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => {
-      const newMode = !prevMode;
-      localStorage.setItem("darkMode", newMode); // Save preference
-      return newMode;
-    });
-  };
-
-  // Apply dark mode class to <body> when toggled
- useEffect(() => {
-  console.log("Applying Dark Mode:", darkMode); // 🛠 Debugging line
-  document.body.classList.toggle("dark-mode", darkMode);
-}, [darkMode]);
-
   return (
     <>
       {/* ✅ Navbar - Stays fixed for easy access */}
@@ -137,16 +117,16 @@ So here I am, exploring, learning, and building—one project at a time.</p>
 
         {/*  Projects Section */}
         <motion.section id="projects" className="py-5">
-          <h2 className="text-center">Projects</h2>
+          <h2 className="text-center mb-4">Projects</h2>
           <Row className="justify-content-center">
             {projects.map((project, index) => (
-              <Col md={4} sm={6} xs={12} className="mb-4" key={index}>
-                <Card className="shadow-lg border-0">
-                  <Card.Img variant="top" src={project.img} />
-                  <Card.Body>
+              <Col md={4} sm={6} xs={12} className="mb-4 d-flex" key={index}>
+                <Card className="shadow-lg border-0 flex-fill">
+                  <Card.Img variant="top" src={project.img} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Body className="d-flex flex-column">
                     <Card.Title>{project.title}</Card.Title>
-                    <Card.Text>{project.description}</Card.Text>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-dark">View Project</a>
+                    <Card.Text className="flex-grow-1">{project.description}</Card.Text>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-dark mt-auto">View Project</a>
                   </Card.Body>
                 </Card>
               </Col>
@@ -158,16 +138,16 @@ So here I am, exploring, learning, and building—one project at a time.</p>
 
         {/* Experience Section */}
         <motion.section id="experience" className="py-5">
-          <h2 className="text-center">Experience</h2>
+          <h2 className="text-center mb-4">Experience</h2>
           <Row className="justify-content-center">
             {experiences.map((exp, index) => (
-              <Col md={5} sm={12} className="mb-4" key={index}>
-                <Card className="shadow-lg border-0">
-                  <Card.Img variant="top" src={exp.img} />
-                  <Card.Body>
+              <Col md={5} sm={12} className="mb-4 d-flex" key={index}>
+                <Card className="shadow-lg border-0 flex-fill">
+                  <Card.Img variant="top" src={exp.img} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Body className="d-flex flex-column">
                     <Card.Title>{exp.title}</Card.Title>
                     <p><strong>{exp.company}</strong> - {exp.date}</p>
-                    <Card.Text>{exp.description}</Card.Text>
+                    <Card.Text className="flex-grow-1">{exp.description}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -179,15 +159,15 @@ So here I am, exploring, learning, and building—one project at a time.</p>
 
         {/*  Leadership Section */}
         <motion.section id="leadership" className="py-5">
-          <h2 className="text-center">Leadership & Community Engagement</h2>
+          <h2 className="text-center mb-4">Leadership & Community Engagement</h2>
           <Row className="justify-content-center">
             {leadership.map((role, index) => (
-              <Col md={5} sm={12} className="mb-4" key={index}>
-                <Card className="shadow-lg border-0">
-                  <Card.Img variant="top" src={role.img} />
-                  <Card.Body>
+              <Col md={5} sm={12} className="mb-4 d-flex" key={index}>
+                <Card className="shadow-lg border-0 flex-fill">
+                  <Card.Img variant="top" src={role.img} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Body className="d-flex flex-column">
                     <Card.Title>{role.title}</Card.Title>
-                    <Card.Text>{role.description}</Card.Text>
+                    <Card.Text className="flex-grow-1">{role.description}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -199,7 +179,7 @@ So here I am, exploring, learning, and building—one project at a time.</p>
 
         {/* Coursework Section */}
         <motion.section id="coursework" className="py-5">
-          <h2 className="text-center">Coursework</h2>
+          <h2 className="text-center mb-4">Coursework</h2>
           <Row>
             <Col md={6}>
               <h4>Computer Science</h4>
