@@ -1,16 +1,17 @@
 /* Apply a clean, professional font */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f8f9fa; /* Light gray background for a modern, clean look */
-  color: #333; /* Dark gray text for readability */
+  background-color: #222222; /* Dark gray background */
+  color: #ffffff; /* White text for readability */
   margin: 0;
   padding: 0;
+  line-height: 1.6; /* Improved line height for better readability */
 }
 
 /* Improve heading styles */
 h1, h2, h3 {
   font-weight: 600;
-  color: #222;  /* Dark gray for a professional look */
+  color: #ffffff; /* White text for headings */
 }
 
 h1 {
@@ -27,19 +28,21 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #f8f9fa; /* Light gray for paragraphs */
 }
 
 /* Improve button styling */
 .btn-dark {
-  background-color: #0056b3; /* Professional blue */
+  background-color: #007bff; /* Professional blue */
   border: none;
   padding: 10px 15px;
   transition: all 0.3s ease-in-out;
   border-radius: 6px;
+  color: #ffffff; /* White text */
 }
 
 .btn-dark:hover {
-  background-color: #003d80; /* Slightly darker blue on hover */
+  background-color: #0056b3; /* Slightly darker blue on hover */
   transform: scale(1.05);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -47,7 +50,7 @@ p {
 /* Improve navbar styles */
 .navbar {
   padding: 15px;
-  background-color: #222; /* Dark gray for a modern look */
+  background-color: #222222; /* Dark gray for a modern look */
 }
 
 .navbar-brand {
@@ -78,6 +81,8 @@ section {
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  background-color: #333333; /* Slightly lighter gray for cards */
+  border: 1px solid #444444; /* Subtle border */
 }
 
 .card:hover {
@@ -85,9 +90,17 @@ section {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.card-title {
+  color: #ffffff; /* White text for card titles */
+}
+
+.card-text {
+  color: #f8f9fa; /* Light gray for card text */
+}
+
 /* Improve footer */
 footer {
-  background-color: #222; /* Dark gray */
+  background-color: #222222; /* Dark gray */
   color: white;
   text-align: center;
   padding: 15px;
@@ -96,7 +109,7 @@ footer {
 
 /* Footer styles */
 .footer {
-  background-color: #222;  
+  background-color: #222222;  
   color: white;
   padding: 30px 0;
   margin-top: 50px;
@@ -104,13 +117,13 @@ footer {
 }
 
 .footer a {
-  color: #ffcc00;  
+  color: #ffcc00; /* Gold for links */
   text-decoration: none;
   font-weight: 500;
 }
 
 .footer a:hover {
-  color: #ffffff; 
+  color: #ffffff; /* White on hover */
   text-decoration: underline;
 }
 
@@ -170,28 +183,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Card hover effects */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Optimize image sizes */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Back to top button */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ffcc00;
+  background-color: #ffcc00; /* Gold */
   color: black;
   border: none;
   padding: 10px 15px;
@@ -203,5 +200,5 @@ img {
 }
 
 .back-to-top:hover {
-  background-color: #e6b800;
+  background-color: #e6b800; /* Darker gold on hover */
 }
