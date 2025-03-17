@@ -180,14 +180,22 @@ So here I am, exploring, learning, and building—one project at a time.</p>
         {/* Coursework Section */}
         <motion.section id="coursework" className="py-5">
           <h2 className="text-center mb-4">Coursework</h2>
-          <Row>
-            <Col md={6}>
+          <Row className="justify-content-center">
+            <Col md={6} className="mb-4">
               <h4>Computer Science</h4>
-              <ul>{csCourses.map((course, index) => <li key={index}>{course}</li>)}</ul>
+              <ul className="list-unstyled">
+                {csCourses.map((course, index) => (
+                  <li key={index} className="mb-2">{course}</li>
+                ))}
+              </ul>
             </Col>
-            <Col md={6}>
+            <Col md={6} className="mb-4">
               <h4>Other Courses</h4>
-              <ul>{otherCourses.map((course, index) => <li key={index}>{course}</li>)}</ul>
+              <ul className="list-unstyled">
+                {otherCourses.map((course, index) => (
+                  <li key={index} className="mb-2">{course}</li>
+                ))}
+              </ul>
             </Col>
           </Row>
         </motion.section>
