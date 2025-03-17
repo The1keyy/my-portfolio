@@ -1,216 +1,207 @@
-/* Basic setup for the whole page */
+/* Apply a clean, professional font */
 body {
-  font-family: 'Inter', sans-serif; /* Clean, modern font */
-  background-color: #f8f9fa; /* Light gray background to keep it soft */
-  color: #333; /* Dark gray text for easy reading */
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa; /* Light gray background for a modern, clean look */
+  color: #333; /* Dark gray text for readability */
   margin: 0;
   padding: 0;
-  line-height: 1.6; /* More space between lines for better readability */
 }
 
-/* Make headings stand out */
+/* Improve heading styles */
 h1, h2, h3 {
-  font-weight: 600; /* Bold but not too heavy */
-  color: #222; /* Dark gray for a professional look */
-  margin-top: 0; /* Remove extra space above headings */
+  font-weight: 600;
+  color: #222;  /* Dark gray for a professional look */
 }
 
 h1 {
-  font-size: 2.5rem; /* Big and bold for impact */
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
-  text-align: center; /* Center section titles */
-  position: relative;
 }
 
-/* Add a blue line under section titles for visual interest */
-h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #0056b3; /* Professional blue */
-  margin: 10px auto 0; /* Center the line */
-  border-radius: 4px;
-}
-
-h3 {
-  font-size: 1.5rem;
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
-/* Make paragraphs easy to read */
-p {
-  font-size: 1.1rem;
-  line-height: 1.8; /* More space between lines */
-  margin-bottom: 20px;
-}
-
-/* Style buttons to look clickable and inviting */
+/* Improve button styling */
 .btn-dark {
   background-color: #0056b3; /* Professional blue */
   border: none;
-  padding: 12px 20px;
-  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
   border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #fff; /* White text for contrast */
 }
 
-/* Make buttons pop on hover */
 .btn-dark:hover {
-  background-color: #003d80; /* Darker blue */
-  transform: scale(1.05); /* Slightly bigger */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background-color: #003d80; /* Slightly darker blue on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Navbar styling */
+/* Improve navbar styles */
 .navbar {
   padding: 15px;
-  background-color: #222; /* Dark gray for a sleek look */
+  background-color: #222; /* Dark gray for a modern look */
 }
 
 .navbar-brand {
   font-weight: 600;
   font-size: 1.3rem;
-  color: #ffffff; /* White text for contrast */
+  color: #ffffff; /* White text */
 }
 
-/* Navbar links */
 .navbar-nav .nav-link {
   font-weight: 400;
   font-size: 1rem;
   padding: 8px 12px;
-  transition: all 0.3s ease-in-out; /* Smooth hover effect */
-  color: #ffffff; /* White text */
+  transition: all 0.3s ease-in-out;
+  color: #ffffff; /* White text for contrast */
 }
 
-/* Add a gold accent on hover for navbar links */
 .navbar-nav .nav-link:hover {
-  color: #ffcc00; /* Gold for warmth */
+  color: #ffcc00; /* Gold accent on hover */
 }
 
-/* Add more space between sections */
+/* Improve section spacing */
 section {
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
-/* Style project cards */
+/* Improve project card styles */
 .card {
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out; /* Smooth hover effect */
-  border: 1px solid #e0e0e0; /* Subtle border */
+  transition: all 0.3s ease-in-out;
 }
 
-/* Make cards lift up on hover */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer styling */
-.footer {
+/* Improve footer */
+footer {
   background-color: #222; /* Dark gray */
   color: white;
-  padding: 40px 0;
-  margin-top: 80px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #222;  
+  color: white;
+  padding: 30px 0;
+  margin-top: 50px;
   text-align: center;
 }
 
-/* Footer links */
 .footer a {
-  color: #ffcc00; /* Gold for warmth */
+  color: #ffcc00;  
   text-decoration: none;
   font-weight: 500;
 }
 
-/* Underline footer links on hover */
 .footer a:hover {
-  color: #ffffff; /* White on hover */
+  color: #ffffff; 
   text-decoration: underline;
 }
 
-/* Mobile responsiveness */
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+/* Mobile responsiveness fixes */
+
+/* Navbar: Ensure menu collapses on mobile */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* About Me Section: Stack image on top in small screens */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem; /* Smaller font for mobile */
+  #about .text-center img {
+    margin-bottom: 15px;
   }
-
-  h2 {
-    font-size: 1.75rem;
+  #about h1 {
+    font-size: 24px;
   }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  p {
-    font-size: 1rem; /* Smaller font for mobile */
-  }
-
-  /* Adjust navbar links for mobile */
-  .navbar-nav .nav-link {
-    padding: 8px 0;
-  }
-
-  /* Add space between stacked cards on mobile */
-  .card {
-    margin-bottom: 20px;
+  #about p {
+    font-size: 16px;
   }
 }
 
-/* Smooth scrolling for a better user experience */
+/* Projects & Experience: Stack properly on small screens */
+@media (max-width: 768px) {
+  .col-md-4, .col-md-5 {
+    width: 100%;
+  }
+}
+
+/* Coursework: Keep text readable on smaller screens */
+@media (max-width: 768px) {
+  #coursework ul {
+    padding-left: 20px;
+  }
+}
+
+/* Footer: Stack sections properly for small screens */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Back-to-top button */
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Optimize image sizes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Back to top button */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ffcc00; /* Gold for visibility */
+  background-color: #ffcc00;
   color: black;
   border: none;
-  padding: 12px 18px;
-  border-radius: 50px; /* Circular button */
+  padding: 10px 15px;
+  border-radius: 50px;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  display: none; /* Hidden by default */
 }
 
-/* Show back-to-top button when scrolling */
-.back-to-top.visible {
-  display: block;
-}
-
-/* Accessibility: Highlight focused elements */
-a:focus, button:focus {
-  outline: 2px solid #0056b3; /* Blue outline */
-  outline-offset: 2px;
-}
-
-/* Fade-in animation for section headers */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply animation to section headers */
-section h2 {
-  animation: fadeInUp 0.6s ease-out;
+.back-to-top:hover {
+  background-color: #e6b800;
 }
