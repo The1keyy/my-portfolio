@@ -98,7 +98,21 @@ function App() {
               <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
             </Col>
             <Col md={8} xs={12}>
-              <h1>👋 Hey, I’m Keyshawn!</h1>
+              <h1>
+              <motion.span
+          animate={{ rotate: [0, 15, -5, 15, 0] }} // More fluid wave motion
+          transition={{
+            duration: 1.5, // Slightly longer duration for a realistic motion
+            repeat: Infinity, // Loop forever
+            repeatType: "mirror", // Makes the motion feel more natural
+            ease: "easeInOut", // Smooth motion
+          }}
+          style={{ display: "inline-block" }} // Keeps the emoji inline
+        >
+          👋
+        </motion.span>{" "}
+        Hey, I’m Keyshawn
+              </h1>
               <p>
         Technology is everywhere, constantly evolving and shaping the world around us. That is what I love about it. It is not just about innovation but about solving real problems and making life easier and more efficient.
       </p>
