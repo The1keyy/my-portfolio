@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
 
-// List of projects - Easily add more
+// List of projects 
 const projects = [
   {
     title: "Meetitude",
@@ -26,7 +26,7 @@ const projects = [
   },
 ];
 
-// Work Experience - Ensure images exist in the "photos" directory
+// Work Experience
 const experiences = [
   {
     title: "Help Desk Engineer Intern",
@@ -65,7 +65,7 @@ const otherCourses = ["Fullstack Bootcamp - Udemy", "Introduction to Psychology"
 function App() {
   return (
     <>
-      {/* ✅ Navbar - Stays fixed for easy access */}
+      {/* Navbar */}
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
         <Container>
           <Navbar.Brand href="#">Keyshawn Jeannot</Navbar.Brand>
@@ -82,10 +82,10 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* ✅ Main Content Container */}
+      {/* Main Content Container */}
       <Container fluid className="px-4" style={{ paddingTop: "90px" }}>
         
-        {/* ✅ About Me Section */}
+        {/* About Me Section */}
         <motion.section 
           id="about" 
           className="py-5 d-flex align-items-center" 
