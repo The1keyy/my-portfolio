@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Defines character encoding to ensure proper text display -->
     <meta charset="utf-8" />
     
-    <!-- Sets the favicon (tab icon) using a relative path -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    
-    <!-- Ensures the page scales properly on mobile devices -->
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+
+    <!-- Web App Manifest for PWA support -->
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
+
+    <!-- Mobile Responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <!-- Sets the default theme color for mobile browsers (affects top bar in mobile browsers) -->
+    <!-- Theme color for mobile browsers -->
     <meta name="theme-color" content="#000000" />
-    
-    <!-- Provides a brief description of the website (used by search engines & social media) -->
-    <meta name="description" content="Web site created using create-react-app" />
-    
-    <!-- Apple-specific icon for home screen bookmarks -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    
-    <!-- Defines web app manifest (used for PWA functionality like installing as an app) -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Sets the title of the webpage (appears on browser tabs) -->
-    <title>React App</title>
 
-    <!-- Preconnect to Google Fonts for faster loading -->
+    <!-- SEO & Meta Description -->
+    <meta name="description" content="Keyshawn Jeannot - Software Engineer & Developer." />
+
+    <!-- Open Graph for better social media previews -->
+    <meta property="og:title" content="Keyshawn Jeannot | Software Engineer & Developer" />
+    <meta property="og:description" content="Passionate about building scalable solutions and solving real-world problems with technology." />
+    <meta property="og:image" content="%PUBLIC_URL%/android-chrome-512x512.png" />
+    <meta property="og:url" content="https://keyshawnjeannot.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Page Title -->
+    <title>Keyshawn Jeannot | Software Engineer & Developer</title>
+
+    <!-- Preconnect to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
-    <!-- Loads Inter font from Google Fonts (300, 400, 600 weight styles) -->
+    <!-- Load Google Font: Inter (300, 400, 600 weight styles) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   
   <body>
-    <!-- Fallback message if JavaScript is disabled (React needs JS to work) -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>This site requires JavaScript to function properly.</noscript>
     
-    <!-- The root div where React injects the entire app (React will mount components inside this) -->
     <div id="root"></div>
   </body>
 </html>
-
