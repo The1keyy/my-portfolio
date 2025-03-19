@@ -38,9 +38,9 @@ This project is **publicly available**, but I encourage others to **create their
 ---
 
 ## 📬 Connect With Me  
-📧 **Email:** [your email]  
+📧 **Email:** [keyshawnjeannot2@gmail.com]  
 🔗 **LinkedIn:** [linkedin.com/in/keyshawnjeannot](https://linkedin.com/in/keyshawnjeannot)  
-🐙 **GitHub:** [github.com/your-username](https://github.com/your-username)  
+🐙 **GitHub:** [github.com/your-username](https://github.com/The1keyy)  
 
 ---
 
