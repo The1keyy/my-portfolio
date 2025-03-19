@@ -26,7 +26,7 @@ function Footer() {
               <li><a href="#about">About Me</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#experience">Experience</a></li>
-              <li><a href="#research">Research</a></li>
+              <li><a href="#leadership">Leadership & Community Engagement</a></li>
               <li><a href="#coursework">Coursework</a></li>
             </ul>
           </Col>

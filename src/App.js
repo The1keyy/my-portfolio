@@ -192,26 +192,31 @@ function App() {
 
         {/* Coursework Section */}
         <motion.section id="coursework" className="py-5">
-          <h2 className="text-center mb-4">Coursework</h2>
-          <Row className="justify-content-center">
-            <Col md={6} className="mb-4">
-              <h4>Computer Science</h4>
-              <ul className="list-unstyled">
-                {csCourses.map((course, index) => (
-                  <li key={index} className="mb-2">• {course}</li>
-                ))}
-              </ul>
-            </Col>
-            <Col md={6} className="mb-4">
-              <h4>Other Courses</h4>
-              <ul className="list-unstyled">
-                {otherCourses.map((course, index) => (
-                  <li key={index} className="mb-2">• {course}</li>
-                ))}
-              </ul>
-            </Col>
-          </Row>
-        </motion.section>
+  <h2 className="text-center mb-4">Coursework</h2>
+  <Container>
+    <Row className="justify-content-center">
+      {/* Computer Science Column */}
+      <Col md={5} className="d-flex flex-column align-items-center">
+        <h4 className="text-center">Computer Science</h4>
+        <ul className="list-unstyled text-center w-100">
+          {csCourses.map((course, index) => (
+            <li key={index} className="mb-2">• {course}</li>
+          ))}
+        </ul>
+      </Col>
+
+      {/* Other Courses Column */}
+      <Col md={5} className="d-flex flex-column align-items-center">
+        <h4 className="text-center">Other Courses</h4>
+        <ul className="list-unstyled text-center w-100">
+          {otherCourses.map((course, index) => (
+            <li key={index} className="mb-2">• {course}</li>
+          ))}
+        </ul>
+      </Col>
+    </Row>
+  </Container>
+</motion.section>
 
       </Container>
 
