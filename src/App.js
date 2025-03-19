@@ -49,17 +49,12 @@ const leadership = [
   {
     title: "National Society of Black Engineers - President",
     description: "As President, I revitalized the NSBE chapter at UMass Boston after a 2-year hiatus, organized STEM workshops, and led chapter operations, including meeting coordination and member engagement initiatives.",
-    img: "/photos/nsbe.png",
-  },
-  {
-    title: "ColorStack Member",
-    description: "Engaged in mentorship and networking events to expand knowledge in software engineering.",
-    img: "/photos/colorstack.png",
+    img: "/photos/nsbe3.png",
   },
   {
     title: "Adage",
     description: "The ADAGE Program at UMB provides access to professional development resources across various tech-related fields, including IT, Cybersecurity, Coding, and AI. The program has also collaborated with major brands like Apple to offer specialized training, such as coding in Swift.",
-    img: "/photos/adage.jpeg",
+    img: "/photos/adage2.png",
   },
 ];
 
@@ -122,7 +117,7 @@ So here I am, exploring, learning, and building—one project at a time.</p>
             {projects.map((project, index) => (
               <Col md={4} sm={6} xs={12} className="mb-4 d-flex" key={index}>
                 <Card className="shadow-lg border-0 flex-fill">
-                  <Card.Img variant="top" src={project.img} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Img variant="top" src={project.img} style={{ height: "250px", objectFit: "cover" }} />
                   <Card.Body className="d-flex flex-column">
                     <Card.Title>{project.title}</Card.Title>
                     <Card.Text className="flex-grow-1">{project.description}</Card.Text>
@@ -143,7 +138,7 @@ So here I am, exploring, learning, and building—one project at a time.</p>
             {experiences.map((exp, index) => (
               <Col md={5} sm={12} className="mb-4 d-flex" key={index}>
                 <Card className="shadow-lg border-0 flex-fill">
-                  <Card.Img variant="top" src={exp.img} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Img variant="top" src={exp.img} style={{ height: "250px", objectFit: "cover" }} />
                   <Card.Body className="d-flex flex-column">
                     <Card.Title>{exp.title}</Card.Title>
                     <p><strong>{exp.company}</strong> - {exp.date}</p>
@@ -164,7 +159,7 @@ So here I am, exploring, learning, and building—one project at a time.</p>
             {leadership.map((role, index) => (
               <Col md={5} sm={12} className="mb-4 d-flex" key={index}>
                 <Card className="shadow-lg border-0 flex-fill">
-                  <Card.Img variant="top" src={role.img} style={{ height: "200px", objectFit: "cover" }} />
+                  <Card.Img variant="top" src={role.img} style={{ height: "250px", objectFit: "cover" }} />
                   <Card.Body className="d-flex flex-column">
                     <Card.Title>{role.title}</Card.Title>
                     <Card.Text className="flex-grow-1">{role.description}</Card.Text>
@@ -185,7 +180,7 @@ So here I am, exploring, learning, and building—one project at a time.</p>
               <h4>Computer Science</h4>
               <ul className="list-unstyled">
                 {csCourses.map((course, index) => (
-                  <li key={index} className="mb-2">{course}</li>
+                  <li key={index} className="mb-2">• {course}</li>
                 ))}
               </ul>
             </Col>
@@ -193,7 +188,7 @@ So here I am, exploring, learning, and building—one project at a time.</p>
               <h4>Other Courses</h4>
               <ul className="list-unstyled">
                 {otherCourses.map((course, index) => (
-                  <li key={index} className="mb-2">{course}</li>
+                  <li key={index} className="mb-2">• {course}</li>
                 ))}
               </ul>
             </Col>
