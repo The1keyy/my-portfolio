@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Import global styles
-import App from './App'; // Import main App component
+import App from './App';
 import reportWebVitals from './reportWebVitals'; // For performance tracking
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap styles for consistent UI
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 // Create a root element for rendering the React app
 const root = ReactDOM.createRoot(document.getElementById('root'));
