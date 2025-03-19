@@ -98,12 +98,16 @@ function App() {
               <img src="/photos/me.jpeg" alt="Keyshawn Jeannot" className="rounded shadow-lg img-fluid" width="250" />
             </Col>
             <Col md={8} xs={12}>
-              <h1>Welcome to my page! I'm Keyshawn, explore my journey in tech and the projects </h1>
-              <p>I love problem-solving, and tech is one of the best ways to do it. I don’t see technology as a way to make the world perfect, but as a tool to tackle real challenges and build solutions that actually make a difference. With tech evolving so fast, history is being made right before our eyes—I’m just grateful to be part of this journey and experience it firsthand.
-
-At first, I thought the only way to help the world was by becoming a doctor, but as I grew, I realized that technology has the power to change lives too. Whether it's creating impactful software, building tools that improve daily life, or just making things more efficient, tech gives me the ability to contribute in ways I never imagined.
-
-So here I am, exploring, learning, and building—one project at a time.</p>
+              <h1>👋 Hey, I’m Keyshawn!</h1>
+              <p>
+        Technology is everywhere, constantly evolving and shaping the world around us. That is what I love about it. It is not just about innovation but about solving real problems and making life easier and more efficient.
+      </p>
+      <p>
+        For as long as I can remember, I thought the only way to truly make a difference was by becoming a doctor. But as I got deeper into technology, I realized something. Technology is just as powerful in changing lives. Whether it is building software, automating processes, or creating tools that help people, technology allows me to problem-solve in meaningful ways, and that is what drives me.
+      </p>
+      <p>
+        Now, I am on a journey of learning, building, and exploring one project at a time.
+      </p>
             </Col>
           </Row>
         </motion.section>
