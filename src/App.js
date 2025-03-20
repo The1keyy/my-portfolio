@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Happy Birthday Memory Grid",
-    description: "An interactive birthday web app with animations and a dynamic photo grid to celebreate my firnd birthday.",
+    description: "An interactive birthday web app with animations and a dynamic photo grid to celebrate my friend birthday.",
     img: "/photos/happy1.png",
     link: "https://the1keyy.github.io/sterlo-birthday-gift/",
   },
